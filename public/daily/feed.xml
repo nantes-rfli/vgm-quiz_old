@@ -1,34 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>VGM Quiz — Daily</title>
-    <link>https://nantes-rfli.github.io/vgm-quiz/daily/</link>
-    <description>Daily 1-question VGM quiz (JST).</description>
-    <language>ja</language>
-    <lastBuildDate>Sat, 13 Sep 2025 15:21:30 GMT</lastBuildDate>
+    <title>[vgm-quiz] クロノ・トリガー — クロノ・トリガー</title>
+    <link>https://nantes-rfli.github.io/vgm-quiz</link>
+    <description>Daily VGM quiz for 2025-09-14. Composer: 光田康典</description>
     <item>
-        <title>Daily version — Title → Game</title>
-        <link>https://nantes-rfli.github.io/vgm-quiz/daily/version.html</link>
-        <guid isPermaLink="true">https://nantes-rfli.github.io/vgm-quiz/daily/version.html</guid>
-        <pubDate>Invalid Date</pubDate>
-      </item>
-    <item>
-        <title>Daily tz — Title → Game</title>
-        <link>https://nantes-rfli.github.io/vgm-quiz/daily/tz.html</link>
-        <guid isPermaLink="true">https://nantes-rfli.github.io/vgm-quiz/daily/tz.html</guid>
-        <pubDate>Invalid Date</pubDate>
-      </item>
-    <item>
-        <title>Daily ogp — Title → Game</title>
-        <link>https://nantes-rfli.github.io/vgm-quiz/daily/ogp.html</link>
-        <guid isPermaLink="true">https://nantes-rfli.github.io/vgm-quiz/daily/ogp.html</guid>
-        <pubDate>Invalid Date</pubDate>
-      </item>
-    <item>
-        <title>Daily map — Title → Game</title>
-        <link>https://nantes-rfli.github.io/vgm-quiz/daily/map.html</link>
-        <guid isPermaLink="true">https://nantes-rfli.github.io/vgm-quiz/daily/map.html</guid>
-        <pubDate>Invalid Date</pubDate>
-      </item>
+      <title>[vgm-quiz] クロノ・トリガー — クロノ・トリガー</title>
+      <link>https://nantes-rfli.github.io/vgm-quiz/daily/2025-09-14.html</link>
+      <guid>https://nantes-rfli.github.io/vgm-quiz/daily/2025-09-14.html</guid>
+      <pubDate>Sat, 13 Sep 2025 18:40:05 GMT</pubDate>
+      <description>Daily VGM quiz for 2025-09-14. Composer: 光田康典</description>
+      <enclosure url="https://nantes-rfli.github.io/vgm-quiz/og/2025-09-14.png" type="image/png" />
+    </item>
   </channel>
 </rss>
