@@ -1,5 +1,40 @@
 [
   {
+    "id": "oneq-pick-must-have-media",
+    "key": "v113-oneq-ensure-media",
+    "title": "oneq の当日 pick は必ず media(provider/id) を持つ（playable≥1 の絶対条件）",
+    "state": "open",
+    "labels": ["v1.13", "data", "ci"],
+    "body": "daily_auto.json の by_date[YYYY-MM-DD] に media が null のままだと UI では再生できない。生成器は Apple>YouTube 優先で provider/id を埋める。dataset 側に media がない日も考慮し、generator 側で解決する。",
+    "notes": [
+      {
+        "at": "2025-09-14T00:00:00+09:00",
+        "by": "bot",
+        "body": "2025-09-13（クロノ・トリガー）で media=null を確認。UI 側の結線は稼働、playable=0 の主因はデータ供給不足。"
+      }
+    ],
+    "acceptance": [
+      "Actions → daily (auto) 実行後、当日の by_date[...] に media が non-null",
+      "Step Summary に allow_heuristic_media:true が出力される",
+      "UI スモークで Start が有効化され音が出る"
+    ]
+  },
+  {
+    "id": "oneq-heuristic-media-switch",
+    "key": "v113-oneq-heuristic-media",
+    "title": "daily (auto) に heuristic media スイッチを標準で有効化（Apple>YouTube）",
+    "state": "open",
+    "labels": ["v1.13", "ops", "ci"],
+    "body": "workflow_dispatch 入力または env で ALLOW_HEURISTIC_MEDIA=true を既定化。必要に応じて WITH_CHOICES=false を維持。",
+    "notes": [
+      {
+        "at": "2025-09-14T00:00:00+09:00",
+        "by": "bot",
+        "body": "現状 Summary: allow_heuristic_media:false。true に切替え、by_date.pick.media を埋める。"
+      }
+    ]
+  },
+  {
     "id": "daily-auto-tracks-playable-1-media-answers",
     "key": "v113-app-daily-auto-wire",
     "title": "daily_auto を tracks へ結線し playable≥1 にする（media/answers 注入）",
