@@ -242,3 +242,11 @@ jobs:
             echo "## Pull Request"
             echo "- pr: ${{ steps.cpr.outputs['pull-request-url'] }}"
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: "Attach media to pick (apple>youtube)"
+        run: |
+          node tools/daily/oneq_attach_media.mjs \
+            --date "${{ steps.date-resolve.outputs.RESOLVED_DATE || github.event.inputs.date }}" \
+            --daily public/app/daily_auto.json \
+            --dataset public/build/dataset.json \
+            --enriched public/app/daily_candidates_scored_enriched.jsonl
