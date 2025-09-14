@@ -149,32 +149,6 @@ jobs:
           fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n')+'\n');
           NODE
 
-      - name: Guard: pick has media when heuristic enabled
-        if: ${{ github.event.inputs.allow_heuristic_media == 'true' }}
-        run: |
-          node - <<'NODE'
-          const fs = require('fs');
-          const raw = fs.readFileSync('public/app/daily_auto.json','utf-8');
-          const j = JSON.parse(raw);
-          const by = j.by_date || {};
-          const inp = (process.env.INPUT_DATE||'').trim();
-          const resolved = (process.env.RESOLVED_DATE||'').trim();
-          const TZ = 'Asia/Tokyo';
-          function todayJST(){
-            try { return new Date(new Date().toLocaleString('en-US', { timeZone: TZ })).toISOString().slice(0,10); }
-            catch { const d = new Date(); return new Date(d.getTime()+9*3600*1000).toISOString().slice(0,10); }
-          }
-          const date = (/^\d{4}-\d{2}-\d{2}$/.test(resolved) ? resolved :
-                        (/^\d{4}-\d{2}-\d{2}$/.test(inp) ? inp : todayJST()));
-          const v = by[date];
-          if (!v) { console.error('no entry for date', date); process.exit(1); }
-          if (!v.media || !v.media.kind) {
-            console.error('media is missing for date', date, 'pick:', v.title, '/', v.game, '/', v.composer);
-            process.exit(1);
-          }
-          console.log('media present:', v.media);
-          NODE
-
       - name: Summary (flags)
         run: |
           {
@@ -233,6 +207,32 @@ jobs:
             fi
             echo "- with_choices: ${WITH_CHOICES}"
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guard: pick has media when heuristic enabled
+        if: ${{ github.event.inputs.allow_heuristic_media == 'true' }}
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const raw = fs.readFileSync('public/app/daily_auto.json','utf-8');
+          const j = JSON.parse(raw);
+          const by = j.by_date || {};
+          const inp = (process.env.INPUT_DATE||'').trim();
+          const resolved = (process.env.RESOLVED_DATE||'').trim();
+          const TZ = 'Asia/Tokyo';
+          function todayJST(){
+            try { return new Date(new Date().toLocaleString('en-US', { timeZone: TZ })).toISOString().slice(0,10); }
+            catch { const d = new Date(); return new Date(d.getTime()+9*3600*1000).toISOString().slice(0,10); }
+          }
+          const date = (/^\d{4}-\d{2}-\d{2}$/.test(resolved) ? resolved :
+                        (/^\d{4}-\d{2}-\d{2}$/.test(inp) ? inp : todayJST()));
+          const v = by[date];
+          if (!v) { console.error('no entry for date', date); process.exit(1); }
+          if (!v.media || !v.media.kind) {
+            console.error('media is missing for date', date, 'pick:', v.title, '/', v.game, '/', v.composer);
+            process.exit(1);
+          }
+          console.log('media present:', v.media);
+          NODE
 
       - name: Summary (PR link)
         if: ${{ steps.cpr.outputs['pull-request-url'] != '' }}
