@@ -208,7 +208,7 @@ jobs:
             echo "- with_choices: ${WITH_CHOICES}"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Guard: pick has media when heuristic enabled
+      - name: "Guard: pick has media when heuristic enabled"
         if: ${{ github.event.inputs.allow_heuristic_media == 'true' }}
         run: |
           node - <<'NODE'
