@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-14",
+  "question": {
+    "type": "guess-track",
+    "locale": "ja",
+    "title": "クロノ・トリガー",
+    "game": "クロノ・トリガー",
+    "composer": "光田康典",
+    "track/id": "2d518cb0-0a4a-3b5e-aa62-27b184c6bb25"
+  },
+  "media": {
+    "provider": "apple",
+    "id": "324080961"
+  },
+  "provenance": {
+    "source": "docs/data/media_map.json",
+    "provider": "apple",
+    "id": "324080961",
+    "collected_at": "2025-09-14T02:03:26.508Z",
+    "hash": "ec7722d15dbce99f0f2dbad84a02cda131957f773131a718daff91525d60332e",
+    "license_hint": "embed-only; see provider terms"
+  }
+}
