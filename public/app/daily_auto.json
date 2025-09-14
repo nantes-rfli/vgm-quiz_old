@@ -93,31 +93,34 @@
       "difficulty": 5
     },
     "2025-09-14": {
-      "title": "クロノ・トリガー",
-      "game": "クロノ・トリガー",
-      "composer": "光田康典",
+      "title": "メインテーマ",
+      "game": "ゼルダの伝説",
+      "composer": "近藤浩治",
       "platform": null,
-      "year": 1995,
-      "media": null,
+      "year": 1986,
+      "media": {
+        "kind": "heuristic",
+        "start": 45
+      },
       "source": "dataset",
       "norm": {
-        "title": "クロノトリガ",
-        "game": "クロノトリガ",
-        "composer": "光田康典",
-        "answer": "クロノトリガ"
+        "title": "メインテマ",
+        "game": "ゼルダの伝説",
+        "composer": "近藤浩治",
+        "answer": "ゼルダの伝説"
       },
       "provenance": {
         "source": "dataset",
-        "collected_at": "2025-09-13T15:29:29.010Z",
+        "collected_at": "2025-09-14T04:45:31.213Z",
         "license_hint": "unknown",
-        "hash": "sha1:49218369f03623dfef92d46ebf1828dcc1c0f0a2"
+        "hash": "sha1:0a13cf1663e1fcf0a4273ab2b27d0a9980ea227b"
       },
       "meta": {
         "provenance": {
           "source": "dataset",
-          "collected_at": "2025-09-13T15:29:29.010Z",
+          "collected_at": "2025-09-14T04:45:31.213Z",
           "license_hint": "unknown",
-          "hash": "sha1:49218369f03623dfef92d46ebf1828dcc1c0f0a2"
+          "hash": "sha1:0a13cf1663e1fcf0a4273ab2b27d0a9980ea227b"
         }
       },
       "difficulty": 4
