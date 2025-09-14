@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-'use strict';
 /**
  * Attach media (provider/id/start) to daily_auto.json pick for a given date.
  * Priority: already-present > enriched JSONL > dataset.json. Provider priority: apple > youtube.
  */
-const fs = require('fs');
+import fs from 'node:fs';
 
 function readJSON(p){ return JSON.parse(fs.readFileSync(p,'utf-8')); }
 function exists(p){ try{ return p && fs.existsSync(p);}catch(_){ return false; } }
@@ -121,4 +120,5 @@ function main(){
   }
 }
 
-if (require.main === module) main();
+// Executed directly as an ES module
+main();
