@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-15",
+  "question": {
+    "type": "guess-track",
+    "locale": "ja",
+    "title": "序曲",
+    "game": "ドラゴンクエスト",
+    "composer": "すぎやまこういち",
+    "track/id": "d18f04f2-7c53-3baf-af77-09952dee1658"
+  },
+  "media": {
+    "provider": "apple",
+    "id": "1824662425"
+  },
+  "provenance": {
+    "source": "docs/data/media_map.json",
+    "provider": "apple",
+    "id": "1824662425",
+    "collected_at": "2025-09-15T02:04:51.961Z",
+    "hash": "ee1813af0ad95ddd92d22c495560b5cfb98eb8a9c25409c5b587d556f844bab3",
+    "license_hint": "embed-only; see provider terms"
+  }
+}
