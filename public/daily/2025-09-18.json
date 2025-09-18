@@ -1,0 +1,23 @@
+{
+  "date": "2025-09-18",
+  "question": {
+    "type": "guess-track",
+    "locale": "ja",
+    "title": "メインテーマ",
+    "game": "ゼルダの伝説",
+    "composer": "近藤浩治",
+    "track/id": "dcb57260-ed1c-3122-809e-73cc6add7659"
+  },
+  "media": {
+    "provider": "apple",
+    "id": "1732110254"
+  },
+  "provenance": {
+    "source": "docs/data/media_map.json",
+    "provider": "apple",
+    "id": "1732110254",
+    "collected_at": "2025-09-18T01:55:31.608Z",
+    "hash": "27b6d2d7d6dc8dbf961fec30d9260ebd6727f816a02be9ce20cc8277026cdc37",
+    "license_hint": "embed-only; see provider terms"
+  }
+}
